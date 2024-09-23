@@ -1,0 +1,91 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen Layout */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    margin: 0;
+    padding: 0;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+	background-color: black/* Light gray background */
+}
+
+/* Video Container Style */
+.video-container {
+    position: relative;
+    width: 80%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    /*max-width: 1200px; Set maximum width for larger screens */
+    /*max-height: 675px;  Set maximum height to maintain aspect ratio */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Center container horizontally and vertically */
+}
+
+/* Background Video Style */
+.background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers entire container */
+    z-index: -1; /* Send video to the background */
+}
+
+.overlay {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Overlay should be above video */
+    cursor: pointer; /* Show a pointer to indicate interactivity */
+}
+
+/* Fade-Out Effect */
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .video-container {
+        width: 90%; /* Increase width for tablets */
+        height: 90%; /* Increase height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 95%; /* Increase width for mobile screens */
+        height: 95%; /* Increase height for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        width: 100%; /* Full width for very small screens */
+        height: 80%; /* Adjust height for very small screens */
+    }
+}

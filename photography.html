@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link rel="stylesheet" href="photography.css">
+    <link rel="stylesheet" href="burger-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="listing.html" class="home-button">
+        <i class="fas fa-home"></i>
+    </a>
+        <div class="top-center-button">
+            <div class="rec_head">
+                <a href="aboutme/aboutme.html" class="label_head-link">
+                <div class="label_head">About me</div>
+                </a>
+            </div>
+        </div>
+        <div class="side-rectangles">
+            <div class="rec_head">
+                <a href="marketing.html" class="label_head-link">
+                <div class="label_head">Marketing | SM </div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="filmmaking.html" class="label_head-link">
+                <div class="label_head">Film-making</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="videography.html" class="label_head-link">
+                    <div class="label_head">Videography</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="innovation.html" class="label_head-link">
+                <div class="label_head">Innovation</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="programming.html" class="label_head-link">
+                <div class="label_head">Programming</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="arch.html" class="label_head-link">
+                <div class="label_head">Arch | Design</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="rec_back">
+        <div class="button-container">
+            <button class="photo-button active" onclick="selectButton(0)">Portrait</button>
+            <button class="photo-button" onclick="selectButton(1)">Urban</button>
+            <button class="photo-button" onclick="selectButton(2)">Arts</button>
+            <button class="photo-button" onclick="selectButton(3)">Sport</button>
+            <button class="photo-button" onclick="selectButton(4)">Street</button>
+            <button class="photo-button" onclick="selectButton(5)">Event</button>
+            <button class="photo-button" onclick="selectButton(6)">Landscape</button>
+        </div>
+        <div class="body-section">
+            <div class="content" id="content-0">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Independent</li>
+                        <li><strong>Type:</strong> Analog and Digital</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/portrait/1.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/portrait/12.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/portrait/13.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/portrait/14.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/portrait/15.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/portrait/16.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/portrait/17.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/portrait/1.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Portrait photography focuses on capturing the essence and personality of a person. It often involves posing, creative lighting, and composition.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-1" style="display: none;">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Independent</li>
+                        <li><strong>Type:</strong> Analog and Digital</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/urban/Untitled-1.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/urban/127.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/123.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/124.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/125.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/126.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/128.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/129.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/130.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/121.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/122.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/urban/Untitled-1.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Urban photography captures the dynamic essence of city life, highlighting the interplay of architecture, culture, and human activity in vibrant urban landscapes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-2" style="display: none;">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>performance:</strong> Independent - "Now or Never" by "Ibrahim Abdo"</li>
+                        <li><strong>performance:</strong> Independent - "Mountain Tail" by "Samar Ezzat"</li>
+                        <li><strong>performance:</strong> Independent - "Wild Moon Child" by "Geka Viafara"</li>
+                        <li><strong>performance:</strong> Independent - "ELLAS: La Palabra y la Danza" by "Libertad Pozo"</li>
+                        <li><strong>performance:</strong> Independent - "My Bedroom - The Play" by "Mahmoud Said"</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/performance/159.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/performance/158.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/157.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/154.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/164.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/165.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/166.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/160.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/161.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/162.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/163.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/155.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/156.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/performance/159.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Artistic photography captures creative expressions, performances, and conceptual art, providing visual narratives of unique art forms and storytelling mediums.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-3" style="display: none;">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Water Proof World - Lago di Garda - Italy</li>
+                        <li><strong>Type:</strong> Digital | 360° | Drones</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/sports/133.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/sports/135.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/134.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/136.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/137.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/138.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/131.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/132.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/sports/133.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>During my work with Water Proof World Kite Surf School, I captured the exhilarating moments of water sports, showcasing the dynamic energy and skill of kite surfers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-4" style="display: none;">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Independent</li>
+                        <li><strong>Type:</strong> Digital</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/street/168.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/street/169.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/170.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/171.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/172.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/173.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/174.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/175.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/167.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/street/168.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Street photography captures candid moments in public places, focusing on the everyday life and interactions of people in urban environments. It often involves a spontaneous approach, highlighting the beauty and complexity of ordinary scenes. The goal is to document the human condition and the vibrant energy of city life, often revealing unique stories and perspectives through the lens.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-5" style="display: none;">
+                <div class="left-column">
+                    <ul>
+                        <ul>
+                            <li><strong>Entities:</strong></li>
+                            <li class="no-bullet"><a href="https://centrointernazionalelapira.org/en/home-2/" target="_blank">Centro La Pira - Florence, Italy</a></li>
+                            <li class="no-bullet"><a href="https://stamegnaretail.com/" target="_blank">Stamgna Network - Milan, Italy</a></li>
+                            <li class="no-bullet"><a href="https://www.spielematerial.de/en/" target="_blank">Spielmaterial - Essen Game Fair - Essen, Germany</a></li>
+                            <li class="no-bullet"><a href="https://www.medrar.org/" target="_blank">Medrar for Contemporary Art - Cairo, Egypt</a></li>
+                            <li class="no-bullet"><a href="https://www.cairocontemporarydancecenter.com/Home" target="_blank">MAAT for Contemporary Art - Cairo, Egypt</a></li>
+                            <li class="no-bullet"><a href="https://cargocollective.com/cairocontemporarydancecenter target="_blank">Cairo Contemporary Dance School - Cairo, Egypt</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/event/141.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/event/142.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/143.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/145.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/147.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/146.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/148.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/149.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/144.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/152.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/153.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/151.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/139.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/140.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/event/141.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Over the years, I've captured the essence of diverse events, from vibrant art exhibitions and performances to dynamic business conferences and rich cultural festivals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-5" style="display: none;">
+                <div class="left-column">
+                    <ul>
+                        <ul>
+                            <li><strong>Type of Work:</strong> Independent</li>
+                            <li><strong>Type:</strong> Analog and Digital</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <img src="photo/landscape/110.jpg" alt="Main Photo">
+                        </div>
+                        <div class="carousel-bar">
+                            <img src="photo/landscape/19.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/113.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/119.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/118.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/120.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/115.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/Untitled-12.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/Untitled-13.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/116.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/112.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/111.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/18.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                            <img src="photo/landscape/110.jpg" onclick="updateMainPhoto(this)" class="carousel-photo">
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Traveling with my camera has allowed me to immortalize breathtaking landscapes, capturing the serene beauty and raw majesty of nature's most stunning vistas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Continue for other categories (Sport, Street, Event, Landscape) -->
+        </div>
+    </div>
+    <script src="photography.js"></script>
+    <script src="burger-menu.js"></script>
+</body>
+</html>

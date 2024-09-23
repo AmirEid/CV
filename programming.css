@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rec_head {
+    background-color: #023047 !important;
+}
+
+.home-button i {
+    color: #023047 !important;
+}
+
+/* Background with looping GIF */
+body {
+    font-family: Arial, sans-serif;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://media.giphy.com/media/hSLDN6zfh2Yy4ekMWi/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.1; /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+/* Layout: 2 columns */
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Right-aligned images */
+.right-aligned-images {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.right-aligned-images img {
+
+    width: 200px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    user-select: none;
+}
+
+.right-aligned-images img:hover {
+    filter: brightness(1.2);
+    transform: scale(2.0) translateX(-50px);
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    font-size: small;
+    
+    left: 35px;
+    padding: 2px 5px;
+  }
+  
+  .sticky-note:hover .hover-text {
+    animation: blink-animation 1s steps(5, start) infinite;
+
+    display: block;
+  }
+
+  .blink-emoji {
+    animation: blink-animation 1s steps(5, start) infinite;
+  }
+  
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Sticky Notes in right column */
+.sticky-note {
+	position: absolute;
+    top: var(--top);
+    left: var(--left);
+    transform: rotate(var(--rotation));
+    width: 200px;
+    height: 200px;
+    background-color: #ffb703;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: rotate(var(--rotation, 0deg));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.sticky-note:hover {
+	animation: rotate360 3s linear infinite;
+    transform: scale(1.1) rotate(var(--rotation, 0deg));
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sticky-note1 {
+    background-color: #d90429 !important;
+}
+
+.sticky-note2 {
+    background-color: #8ecae6 !important;
+}
+
+/* Title in handwriting font */
+.sticky-note-title {
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+	padding: 10px;
+	user-select: none;
+}
+
+/* Modal for details */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-image: url('background\ window.png'); /* Make sure the image path is correct */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9); /* Ensure a solid background behind the image */
+    border-radius: 10px; /* Optional: Adds smooth border */
+}
+
+.modal.open {
+    display: block;
+    opacity: 1;
+}
+
+.modal h2 {
+    font-family: 'Comic Neue', cursive;
+}
+
+.modal p {
+    margin-top: 25px;
+    padding: 25px 0; /* Add padding to the paragraph */
+}
+
+.modal button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button,
+.modal .external-link-button {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #eda62a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	margin-top: 20px;
+}
+
+.modal button {
+    left: 20px; /* Position the Cancel button on the left */
+}
+
+.modal .external-link-button {
+    right: 40px; /* Position the external link button on the right */
+}
+
+.modal ul {
+	margin-bottom: 60px;
+	padding: 40px;
+}
+
+/* Fade in/out */
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+        /* Adjust container layout to be vertical for smaller screens */
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+    
+        /* Ensure the sticky notes don't overlap and have space */
+        .sticky-note {
+            width: 140px; /* Smaller sticky notes */
+            height: 140px;
+            margin: 20px auto; /* Center sticky notes and add margin */
+        }
+
+        #sticky1 {
+            width: 140px; /* Adjust width for this specific sticky note */
+            height: 140px; /* Adjust height */
+            margin-top: 30px; /* Add space above the sticky note */
+            transform: rotate(5deg); /* Optionally adjust rotation */
+            position: relative;
+            left: 40px;
+        }
+    
+        .sticky-note-title {
+            font-size: 1rem; /* Reduce the font size slightly */
+        }
+        
+        .hover-text{
+            display: none !important;
+        }
+    
+        /* Reduce the size of the right-aligned images and prevent overlap */
+        .right-aligned-images {
+            right: -180px;
+            top: -90px;
+            position: relative;
+            align-items: center;
+            width: 100%;
+        }
+    
+        .right-aligned-images img {
+            width: 120px; /* Smaller images */
+            margin-bottom: 0px;
+        }
+    
+        /* Burger menu button retains position */
+        .home-button {
+            top: 10px;
+            right: 10px;
+            font-size: 24px; /* Smaller font size */
+        }
+    
+        /* Ensure the rectangles scale down and fit well */
+        .side-rectangles {
+            width: 80px;
+            padding-left: 5px;
+            font-size: 5px;
+        }
+    
+        .side-rectangles .rec_head {
+            height: 70px;
+            max-width: 70px;
+            font-size: 10px;
+        }
+    
+        .label_head {
+            font-size: 10px;
+            top: auto;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .top-center-button {
+            position: fixed;
+            top: 10px; /* Make sure it's within the viewport */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001; /* Increase z-index to ensure it's on top */
+        }
+    
+        .top-center-button .rec_head {
+            width: 150px;
+            height: 50px;
+            z-index: 1001; /* Ensure top-center button is clickable */
+        }
+    
+        /* Modal pop-up styles */
+        .modal {
+            width: 90%;
+            max-width: 300px; /* Smaller modal width for tablets */
+            padding: 15px; /* Adjust padding for better fit */
+        }
+    
+        .modal p {
+            margin-top: 50px;
+            padding: 15px 0;
+        }
+    
+        .modal ul {
+            padding: 20px;
+        }
+    
+        /* Ensuring burger menu icon is visible and functional */
+        .home-button i {
+            font-size: 24px;
+        }
+} 

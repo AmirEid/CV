@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videography</title>
+    <link rel="stylesheet" href="videography.css">
+    <link rel="stylesheet" href="burger-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="listing.html" class="home-button">
+        <i class="fas fa-home"></i>
+    </a>
+    <div class="header">
+        <div class="top-center-button">
+            <div class="rec_head">
+                <a href="aboutme/aboutme.html" class="label_head-link">
+                <div class="label_head">About me</div>
+                </a>
+            </div>
+        </div>
+        <div class="side-rectangles">
+            <div class="rec_head">
+                <a href="marketing.html" class="label_head-link">
+                <div class="label_head">Marketing | SM</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="filmmaking.html" class="label_head-link">
+                <div class="label_head">Film-making</div>
+                </a>
+            </div>
+            <div class="rec_head">
+				<a href="photography.html" class="label_head-link">
+                    <div class="label_head">Photography</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="innovation.html" class="label_head-link">
+                <div class="label_head">Innovation</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="programming.html" class="label_head-link">
+                <div class="label_head">Programming</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="arch.html" class="label_head-link">
+                <div class="label_head">Arch | Design</div>
+                </a>
+            </div>
+        </div>
+    <div class="rec_back">
+        <div class="button-container">
+            <button class="photo-button active" onclick="selectButton(0)">Sports</button>
+            <button class="photo-button" onclick="selectButton(1)">Events</button>
+            <button class="photo-button" onclick="selectButton(2)">Performances</button>
+            <button class="photo-button" onclick="selectButton(3)">Independent</button>
+            <button class="photo-button" onclick="selectButton(3)">Education</button>
+        </div>
+        <div class="body-section">
+            <div class="content" id="content-0">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Water Proof World - Lago di Garda, Italy</li>
+                        <li><strong>Equipment:</strong> Digital | 360° | Drones</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <video src="video/sports.mp4" alt="Main Photo" controls></video>
+                        </div>
+                        <div class="description">
+                            <p>This is a showreel of my collaboration with Water Proof World in 2023, where I tried to show the aspects of water sports</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-1">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Stamegna Retail Management:</strong> Event coverage, Milan - Italy</li>
+                        <li><strong>Medrar TV:</strong>
+                        <ul>
+                            <li>"Viorama" Workshop</li>
+                            <li>"Worms and Passports" Exhibition</li>
+                            <li>"When Art Becomes Liberty" Surrealist Exhibition, Caio Opera House</li>
+                            <li>"The Truth of the Desert" Artist Talk</li>
+                            <li>"They Usually Lie Arount a Grotto" Exhibition</li>
+                            <li>"The Nutshell" Exhibition</li>
+                            <li>"Roznama 8" Collective Exhibition</li>
+                            <li>"Naema's Office is Bleeding 4" Exhibition</li>
+                            <li>"The Motion of the Images" Interview</li>
+                            <li>"Token" Exhibition</li>
+                            <li>"K for Cannibal" Exhibition</li>
+                            <li>"Notes on Collaboration" Exhibition</li>
+                            <li>"CairoTronica" Exhibition</li>
+                            <li>"Cairo Prints II" Exhibition</li>
+                            <li>"The 10th Cairo Video Festival" Festival</li>
+                            <li>"Guide Spots" Exhibition</li>
+                            <li>"An Object Resembling an Artwork" Exhibition</li>
+                            <li>"Amriya" Exhibition</li>
+                            <li>"Ace of Spades" Exhibition</li>
+                            <li>"ABI Park" Exhibition</li>
+                            <li>"1985" Exhibition</li>
+                        </ul>
+                        </li>
+                        <li><strong>Animal Angels Germany:</strong> Berqash Camel Market</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <video src="video/events/Stamegna Network European Health & Beauty Care Event, Milan 2023.mp4" poster="video/milan-transformed.png" alt="Main Photo" controls></video>
+                        </div>
+                        <div class="carousel-bar">
+                            <video src="video/events/TOKEN  Exhibition by Aya Tarek.mp4" poster="video/aya.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+							<video src="video/events/Taking Place Performance.mp4" poster="video/nbeshy.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+                            <video src="video/events/Guideposts - Solo Exhibition by Bassem Yousri.mp4" poster="video/bassem.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+                        </div>
+                        <div class="description">
+                            <p>This is only part of my work in covering events, and all those videos do exist on YouTube and more!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-2">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Townhouse:</strong>
+                        <ul>
+                            <li>"Waste" by Esraa Magdy - Dance Performance</li>
+                            <li>"The Bubble" by Shady AbdelRahman - Dance Performance</li>
+                            <li>"The Gate" by Shady AbdelRahman - Dance Performance</li>
+                            <li>"Now or Never" by Ibrahim Abdo - Dance Performance</li>
+                            <li>"Wild Moon Child" by Geka Viafara - Dance Performance</li>
+                            <li>"Mountain Tail" by Samar Ezzat - Dance Performance</li>
+                        </ul>
+                        </li>
+                        <li><strong>ROOM Art Space:</strong>
+                            <ul>
+                                <li>"A modo Mio" by Luisa Russo - Music Performance</li>
+                                <li>"Estabena" by Estabena Project - Music Performance</li>
+                                <li>"Sol Diese" by Sol Diese - Music Performance</li>
+                            </ul>
+                        </li>
+                        <li><strong>Cairo University Theatre:</strong> "Historia De Una Escalera" by Eid Diab</li>
+                        <li><strong>Dawar Arts:</strong> "My Bedroom Stories" Interactive Performance</li>
+                        <li><strong>Cairo Contermporary Dance Center:</strong>
+                            <ul>
+                                <li>"To The Woman on The Other Side" by Anna Maria Suykerbuyk - Residency</li>
+                                <li>"Hoop Om On Ay" by Nicolas Cantilon - Dace Performance</li>
+                                <li>"FuittFuitt" Workshop by Laurence Yadi Nicolas Cantilon - Dance Performance</li>
+                            </ul>
+                        </li>
+                        <li><strong>Medrar TV:</strong>
+                            <ul>
+                                <li>"Again and Again and Again" by Eslam Elnebishy - Dance Performance</li>
+                                <li>"ZAAR" by ZAAR - Music Concert</li>
+                                <li>"Taking Place" Goethe Institut - Dance Performance</li>
+                                <li>"Where Can I Find Someone Like You, Ali?" DCAF Festival - Dance Performance</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <video src="video/dance/To the woman on the other side Residency.mp4" poster="video/dance/nbeeshy-.png" alt="Main Photo" controls></video>
+                        </div>
+                        <div class="carousel-bar">
+                            <video src="video/dance/Hoop-om-on-ay.mp4" poster="video/dance/hoop-Yu.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+							<video src="video/dance/AGAIN AND AGAIN AND AGAIN.mp4" poster="video/dance/nebeshy.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+                            <video src="video/dance/FuittFuitt workshop at CCDC.mp4" poster="video/dance/fuitt-.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+                        </div>
+                        <div class="description">
+                            <p>These are only selected videos of a long list of performances coverage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-3">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Independent</li>
+                        <li><strong>Equipment:</strong> Digital | 360° | Drones</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <video src="video/indepenedent.mp4" poster="video/indi.png" alt="Main Photo" controls></video>
+                        </div>
+                        <div class="carousel-bar">
+                            <video src="video/collage.MP4" poster="video/collage.png" onclick="updateMainPhoto(this)" class="carousel-photo"></video>
+                        </div>
+                        <div class="description">
+                            <p>These are videos I create for my own social media channels for publicity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="content-3">
+                <div class="left-column">
+                    <ul>
+                        <li><strong>Type of Work:</strong> Production - Montage - Graphics </li>
+                        <li><strong>Equipment:</strong> Digital | Drones</li>
+                        <li><strong>Employer:</strong> CPIA Lecco - Italy</li>
+                        <li><strong>Project:</strong> Piazza Bella Piazza 
+                            <a href="https://www.piazzabellapiazza.it" target="_blank">Visit Piazza Bella Piazza</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <div class="gallery">
+                        <div class="main-photo">
+                            <video src="video/editing/Gaeta.mp4" alt="Main Photo" controls></video>
+                        </div>
+                        <div class="description">
+                            <p>Until this very moment, I have done 18 videos for the school, these videos are part of "Piazza Bella Piazza" project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Continue for other categories (Sport, Street, Event, Landscape) -->
+        </div>
+    </div>
+    <script src="videography.js"></script>
+    <script src="burger-menu.js"></script>
+</body>
+</html>

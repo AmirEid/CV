@@ -1,0 +1,251 @@
+.home-button {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 32px; /* Increase font size */
+    cursor: pointer;
+    padding: 10px; /* Add padding */
+    z-index: 1000; /* Ensure it is on top of other elements */
+    transition: transform 0.3s ease;
+}
+
+.label_head-link {
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link a block element */
+}
+
+.home-button i {
+    color: white; /* Ensure the icon is white */
+    font-size: 24px; /* Increase icon size */
+}
+
+/* Hover Effect */
+.home-button:hover {
+    transform: scale(1.1); /* Scale up the button by 10% */
+}
+
+/* Fade-in effect for the body */
+.header {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrollbar from appearing */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container for the left-side rectangles */
+.side-rectangles {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Rectangle styling */
+.rec_head {
+    position: relative;
+    width: 90%; /* Width relative to the container */
+    max-width: 50px; /* Max width to prevent overflow on larger screens */
+    height: 120px; /* Default height */
+    margin-bottom: 10px;
+    background-color: #333;
+    border: 2px solid white;
+    overflow: hidden;
+    transform: translateX(-50px); /* Partially hide the rectangle */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    filter: brightness(50%);
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+
+.top-center-button .rec_head {
+    height: 100px;
+    transform: translateX(0) scale(1.01) !important; /* Adjusted height for the top center button */
+}
+
+.rec_head:hover {
+    filter: brightness(100%);
+    transform: translateX(0) scale(1.50); /* Slide out fully and scale up on hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Increased shadow on hover */
+}
+
+.label_head {
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-align: center;
+    left: 10px;
+    transform: translateY(-50%);
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 0 0 5px black;
+    z-index: 2;
+    font-family: serif;
+}
+
+.top-center-button .rec_head .label_head {
+    top: 5px;
+    font-size: 16px;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+    right: 3px
+}
+
+.side-rectangles .rec_head .label_head {
+    top: 10px;
+    font-size: 12px;
+}
+
+.rec_head:hover .label_head {
+    transform: scale(1.05);
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* Top center rectangle button container */
+.top-center-button {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50px); /* Initially offset above the viewport */
+    transition: transform 0.3s ease;
+}
+
+.top-center-button .rec_head {
+    width: 250px;
+    height: 70px;
+}
+
+.top-center-button:hover .rec_head {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Increased shadow on hover */
+    text-align: center;
+}
+
+.top-center-button:hover {
+    transform: translate(-30%, 0); /* Move into full view on hover */
+}
+
+/* Class to handle the exit animation */
+.exit-left {
+    transform: translateX(-100vw); /* Move off-screen to the left */
+    transition: transform 1s ease-in-out;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .side-rectangles {
+        width: 80px; /* Smaller width for tablets */
+        padding-left: 5px;
+        font-size: 5px;
+    }
+
+.top-center-button .rec_head .label_head {
+    top: 10px;
+    font-size: 12px;
+}
+
+.side-rectangles .rec_head .label_head {
+    top: 5px;
+    font-size: 10px;
+}
+
+   
+.label_head {
+        font-size: 10px; /* Smaller font size for label_heads */
+        top: auto;
+        bottom: 5px; /* Position label_head at the bottom */
+        left: 50%;
+        transform: translateX(-80%);
+    }
+
+    .rec_head {
+        height: 70px; /* Smaller height for rectangles on tablets */
+        max-width: 70px; /* Max width on smaller devices */
+        font-size: 10px;
+    }
+
+    .top-center-button .rec_head {
+        width: 130px; /* Adjust button width on tablets */
+        height: 70px; /* Adjust button height on tablets */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .side-rectangles {
+        flex-direction: row; /* Stack rectangles horizontally on small screens */
+        width: 100%; /* Full width for the container */
+        height: 100px; /* Adjust height to accommodate the new layout */
+        padding: 0;
+        top: auto;
+        bottom: 0; /* Stick to the bottom of the screen */
+    }
+
+    .rec_head {
+        flex: 1; /* Allow rectangles to grow and fill available space */
+        max-width: 30px; /* Smaller max width for phones */
+        height: 60px; /* Smaller height for phones */
+        margin-bottom: 0; /* No margin for horizontal stacking */
+    }
+
+    .label_head {
+        font-size: 5px; /* Smaller font size for label_heads */
+        top: auto;
+        bottom: 5px; /* Position label_head at the bottom */
+        left: 50%;
+        transform: translateX(-50%); /* Center the label_head */
+    }
+
+    .top-center-button {
+        top: 5%; /* Adjust position for mobile */
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .top-center-button rec_head {
+        width: 80%; /* Width relative to viewport */
+        height: 30px; /* Adjust height for mobile */
+    }
+
+    .rec_head:hover {
+        filter: brightness(100%);
+        transform: translateX(0) scale(1.05); /* Slide out fully and scale up on hover */
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Increased shadow on hover */
+    }
+
+    .rec_head:hover .label_head {
+        transform: scale(1.05);
+        color: whitesmoke;
+        text-align: center;
+    }
+
+    .top-center-button:hover .rec_head {
+        transform: scale(1.05); /* Scale up on hover */
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Increased shadow on hover */
+        text-align: center;
+    }
+    
+    .top-center-button:hover {
+        transform: translate(-30%, 0); /* Move into full view on hover */
+    }
+}

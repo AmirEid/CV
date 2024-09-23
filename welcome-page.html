@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="welcome-page.css">
+</head>
+<body>
+    <div class="video-container" id="video-container">
+        <video autoplay muted class="background-video" id="background-video">
+            <source src="intro/intro-site.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Copyright Section -->
+    <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; padding: 360px; background-color: rgba(0, 0, 0, 0.5); color: white;">
+        &copy; <span id="year"></span> Amir Eid
+    </footer>
+
+    <script>
+        // JavaScript to handle click event and motion effect
+        function handleRedirect() {
+            // Add the fade-out effect
+            document.getElementById('video-container').classList.add('fade-out');
+            document.getElementById('overlay').classList.add('fade-out');
+
+            // After the fade-out effect, redirect to a different page
+            setTimeout(function () {
+                window.location.href = 'listing.html'; // Replace with your target page URL
+            }, 1000); // Duration should match the CSS transition duration
+        }
+
+        // Add event listeners
+        const video = document.getElementById('background-video');
+        const overlay = document.getElementById('overlay');
+
+        // Handle click on overlay or video
+        overlay.addEventListener('click', handleRedirect);
+        video.addEventListener('click', handleRedirect);
+
+        // Handle video end
+        video.addEventListener('ended', handleRedirect);
+
+        // Dynamically set the current year for the copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

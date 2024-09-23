@@ -1,0 +1,180 @@
+/* Fade-in effect */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Container to center the content */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Rectangle styling */
+.rectangle {
+    position: relative;
+    width: 200px;
+    height: 500px;
+    margin: 10px;
+    background-color: #333;
+    border: 2px solid white;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    filter: brightness(50%);
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.3);
+}
+
+.rectangle:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+.rectangle::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; /* Adjust placement closer to the bottom of the rectangle */
+    left: 0;
+    width: 100%;
+    height: 40%; /* Height should be relative to the rectangle's size */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent); /* Corrected reflection effect */
+    transform: scaleY(-1);
+    opacity: 0.5;
+    pointer-events: none; /* Ensure it doesn't interfere with hover effects */
+}
+
+.rectangle img, .rectangle video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.label {
+    position: absolute;
+    top: 10px;
+    left: 15px; /* Adjusted to the left */
+    transform: translateX(-10px);
+    color: black; /* Changed to black for better contrast */
+    background-color: white; /* Added white background */
+    padding: 10px 10px; /* Added padding */
+    border-radius: 6px; /* Added border-radius */
+    font-size: 13px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-family: serif;
+    text-shadow: 0 0 1px black;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.rectangle:hover .label {
+    transform: scale(1.00);
+    color: black;
+    white-space: nowrap;
+    text-shadow: 0 0 1px black;
+}
+
+.rectangle:hover img,
+.rectangle:hover video {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+/* Fade out and slide left classes */
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+.slide-left {
+    animation: slideLeft 1s ease-in-out forwards;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and larger phones in landscape mode */
+@media (max-width: 1024px) {
+    .rectangle {
+        width: 150px;
+        height: 250px;
+    }
+
+    .label {
+        font-size: 18px;
+    }
+}
+
+/* Small tablets and larger phones in portrait mode */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .rectangle {
+        width: 100%;
+        max-width: 150px;
+        height: 200px;
+        margin: 10px 0;
+    }
+
+    .label {
+        font-size: 10px;
+    }
+}
+
+/* Phones in portrait mode */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .rectangle {
+        width: 100%;
+        max-width: 350px;
+        height: 150px;
+    }
+
+    .label {
+        font-size: 10px;
+    }
+}

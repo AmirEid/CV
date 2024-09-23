@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming</title>
+    <link rel="stylesheet" href="programming.css">
+	<link rel="stylesheet" href="burger-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<a href="listing.html" class="home-button">
+        <i class="fas fa-home"></i>
+    </a>
+        <div class="top-center-button">
+            <div class="rec_head">
+                <a href="aboutme/aboutme.html" class="label_head-link">
+                <div class="label_head">About me</div>
+                </a>
+            </div>
+        </div>
+        <div class="side-rectangles">
+            <div class="rec_head">
+                <a href="marketing.html" class="label_head-link">
+                <div class="label_head">Marketing | SM</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="filmmaking.html" class="label_head-link">
+                <div class="label_head">Film-making</div>
+                </a>
+            </div>
+            <div class="rec_head">
+				<a href="photography.html" class="label_head-link">
+                    <div class="label_head">Photography</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="videography.html" class="label_head-link">
+                <div class="label_head">Videography</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="innovation.html" class="label_head-link">
+                <div class="label_head">Innovation</div>
+                </a>
+            </div>
+            <div class="rec_head">
+                <a href="arch.html" class="label_head-link">
+                <div class="label_head">Arch | Design</div>
+                </a>
+            </div>
+        </div>
+    <div class="container">
+        <!-- Left column: PNGs -->
+        <div class="right-aligned-images">
+            <img src="charts-1-01.png" alt="Image 1">
+            <img src="charts-1-02.png" alt="Image 2">
+        </div>
+
+        <!-- Right column: Sticky Notes -->
+        <div class="right-column">
+            <div class="sticky-note" style="--rotation: -5deg; --top: 10%; --left: 20%;" ondblclick="openModal('modal1')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Mini Shell</div>
+            </div>
+            <div class="sticky-note sticky-note1" style="--rotation: 3deg; --top: 40%; --left: 35%;" ondblclick="openModal('modal2')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Philosophers</div>
+            </div>
+            <div class="sticky-note sticky-note2" style="--rotation: -8deg; --top: 70%; --left: 30%;" ondblclick="openModal('modal3')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Pipex</div>
+            </div>
+            <div class="sticky-note" style="--rotation: -5deg; --top: 50%; --left: 50%;" ondblclick="openModal('modal4')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Push Swap</div>
+            </div>
+            <div class="sticky-note sticky-note1" style="--rotation: -5deg; --top: 40%; --left: 10%;" ondblclick="openModal('modal5')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Get Next Line</div>
+            </div>
+            <div class="sticky-note sticky-note2" style="--rotation: -12deg; --top: 18%; --left: 50%;" ondblclick="openModal('modal6')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">So Long</div>
+            </div>
+            <div class="sticky-note" id="sticky1" style="--rotation: 6deg; --top: 15%; --left: 70%;" ondblclick="openModal('modal7')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Libft</div>
+            </div>
+            <div class="sticky-note sticky-note2" style="--rotation: 17deg; --top: 45%; --left: 70%;" ondblclick="openModal('modal8')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Printf</div>
+            </div>
+            <div class="sticky-note sticky-note1" style="--rotation: -17deg; --top: 75%; --left: 60%;" ondblclick="openModal('modal9')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Bort2beroot</div>
+            </div>
+            <div class="sticky-note sticky-note" style="--rotation: 12deg; --top: 70%; --left: 10%;" ondblclick="openModal('modal10')">
+                <span class="hover-text">double click <br>or<br> move me around <span class="blink-emoji">👀</span></span>
+                <div class="sticky-note-title">Mini RT (In progress)</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Box -->
+    <!-- Minishell-->
+    <div class="modal" id="modal1">
+        <p>This is a 42 porject, that aims at understanding the shell, how a terminal works, exploring types of commands. This project main goals is creating a mini shell, starting from creating creating tokens of a simple arguments/commands, parse them, and execute them. In this project it is required to execute all the external commands, as well as creating a set of built in commands such as pwd, cd, export, unset, exit, env. It is also required to apply the following signals: ctrl-, ctrl-d, ctrl-c It is mandatory to apply the expansion as well as $? that gets the exit status code.</p>
+        <ul>
+            <li>Unix</li>
+            <li>Rigor</li>
+            <li>Imperative-Programming</li>
+        </ul>
+        <button onclick="closeModal('modal1')">Naah</button>
+		<a href="https://github.com/AmirEid/Mini-shell" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- philosophers-->
+    <div class="modal" id="modal2">
+        <p>A 42 project that is aiming at exploring the areas of Threads, Mutexies, handling data races, Semaphores and processes.</p>
+        <ul>
+            <li>Unix</li>
+            <li>Rigor</li>
+            <li>Imperative-Programming</li>
+        </ul>
+        <button onclick="closeModal('modal2')">Naah</button>
+		<a href="https://github.com/AmirEid/Philosophers" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+     <!-- Pipex-->
+     <div class="modal" id="modal3">
+        <p>This project aims to understanding the unix system, exploring topics such as pipes and redirections. This project strengthen the knowledge on environment variables, external commands, the use of functions such as dup2, access, execve and handling exit statuses.</p>
+        <ul>
+            <li>Unix</li>
+            <li>Imperative-Programming</li>
+        </ul>
+        <button onclick="closeModal('modal3')">Naah</button>
+		<a href="https://github.com/AmirEid/Pipex" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- Push Swap-->
+    <div class="modal" id="modal4">
+        <p>This project explores the areas of data sorting, algorithms and differences between each. This project also utilizes the linked lists as I used a doubled linked list in this current project.</p>
+        <ul>
+            <li>Unix</li>
+            <li>Imperative-Programming</li>
+            <li>Rigor</li>
+            <li>Algorithms & AI</li>
+        </ul>
+        <button onclick="closeModal('modal4')">Naah</button>
+        <a href="https://github.com/AmirEid/Push-Swap" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- Get Next Line-->
+    <div class="modal" id="modal5">
+        <p>This project aims at reading from wether a file, STDIN, or whatever that returns an int fd when read or opened. This program aims at reading line by line until either the EOF or \n, and returns that line as a char *line. This program explores the areas of "Static Variables", its usage and imporatance.</p>
+        <ul>
+            <li>Unix</li>
+            <li>Rigor</li>
+            <li>Algorithms & AI</li>
+        </ul>
+        <button onclick="closeModal('modal5')">Naah</button>
+        <a href="https://github.com/AmirEid/Get-next-line" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- So long-->
+    <div class="modal" id="modal6">
+        <p>This project is a small 2D game with minilibx. You'll learn about textures, sprites and tiles.</p>
+        <ul>
+            <li>Graphics</li>
+            <li>Imperative-Programming</li>
+        </ul>
+        <button onclick="closeModal('modal6')">Naah</button>
+        <a href="https://github.com/AmirEid/So-long" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- Libft-->
+    <div class="modal" id="modal7">
+        <p>This project is our very first project as a student at 42. we need to recode a few functions of the C standard library as well as some other utility functions that we will use during our whole cursus.</p>
+        <ul>
+            <li>Rigor</li>
+            <li>Algorithms & AI</li>
+            <li>Imperative-Programming</li>
+        </ul>
+        <button onclick="closeModal('modal7')">Naah</button>
+        <a href="https://github.com/AmirEid/Libft" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- Printf-->
+    <div class="modal" id="modal8">
+        <p>This project is aiming at recoding the printf function. More importantly it is a practice on variadic functions and how to implement and use them.</p>
+        <ul>
+            <li>Rigor</li>
+            <li>Algorithms & AI</li>
+        </ul>
+        <button onclick="closeModal('modal8')">Naah</button>
+        <a href="https://github.com/AmirEid/Printf-remake" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- born2beroot-->
+    <div class="modal" id="modal9">
+        <p>This project aims at understanding the unix system, and installing a debian vertual machine without using a GUI. This project also explores areas such SSH, UFW, root users, TTY, installing passwords and updating the its protection protocols, and lastly creating a monitoring.sh that prints every 10 mins all the properties of the computer such as CPU, RAM, LVM..etc.</p>
+        <ul>
+            <li>Rigor</li>
+            <li>Network</li>
+            <li>System-Administration</li>
+        </ul>
+        <button onclick="closeModal('modal9')">Naah</button>
+        <a href="https://github.com/AmirEid/Born2beroot" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+    <!-- minirt-->
+    <div class="modal" id="modal10">
+        <p>This project is an introduction to the beautiful world of Raytracing.</p>
+        <ul>
+            <li>Rigor</li>
+            <li>Algorithms & AI</li>
+            <li>Imperative-Programming</li>
+            <li>Graphics</li>
+        </ul>
+        <button onclick="closeModal('modal10')">Naah</button>
+        <a href="https://github.com/AmirEid/Mini-RT" target="_blank" class="external-link-button">Check Code</a>
+    </div>
+
+    <script src="programming.js"></script>
+	<script src="burger-menu.js"></script>
+</body>
+</html>
+
+

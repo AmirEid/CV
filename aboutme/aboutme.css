@@ -1,0 +1,208 @@
+.home-button i {
+  color: #f7bd0b !important;
+}
+
+.rec_head {
+  background-color: #f7bd0b !important;
+  z-index: 1000 !important;
+}
+
+/* Basic Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+  
+  /* Section Layout */
+  .section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  #bio {
+    background: url('bkgrnd.png') no-repeat center center/cover;
+  }
+
+  #bio .bio-text p {
+    font-size: 20px; /* Adjust the font size as needed */
+    padding: 50px;
+    margin: 20px;
+}
+
+  .bio-text ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.bio-text ul li {
+    margin-left: 0; /* Remove default margin */
+    padding-left: 0; /* Remove default padding */
+    font-size: 18px;
+}
+
+  #bio .content img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: make the photo circular */
+    margin: 20px; /* Optional: add some margin around the photo */
+}
+  
+  #transition {
+    background: #333;
+    color: white;
+    height: 5vh;
+    background: url('aboutme.png') no-repeat center center/cover;
+  }
+
+  #transition .transition-content {
+    /* Add your styles here */
+    padding: 10px; /* Example style */
+    font-size: 16px; /* Example style */
+    color: white; /* Example style */
+    height: 5vh;
+}
+  
+  #wallet {
+    background: url('scenes-01.png') no-repeat center center/cover;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  
+  #wallet img {
+    width: 200px; /* Adjust the size of the icons as needed */
+    height: 380px; /* Adjust the size of the icons as needed */
+    margin: 10px; /* Adjust the spacing between icons as needed */
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+
+  #wallet img:hover {
+    transform: translateY(-10px) scale(1.1); /* Move up and scale */
+  }
+
+  .profile-photo {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .wallet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Parallax Effect */
+  .section {
+    position: relative;
+  }
+  
+  #bio, #transition, #wallet {
+    background-attachment: fixed;
+  }
+  
+  /* Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Pop-ups */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .popup-content object {
+    width: 1200px;
+    height: auto;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: aliceblue;
+  }
+
+  .popup .close_key img {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+  }
+  
+  /* Responsive Design for Phones and Tablets */
+  @media screen and (max-width: 768px) {
+    .profile-photo {
+      width: 120px;
+    }
+  
+    svg {
+      width: 90%;
+      height: auto;
+    }
+  
+    .popup-content {
+      width: 90%;
+    }
+  }
+  
