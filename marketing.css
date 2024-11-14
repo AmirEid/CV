@@ -5,8 +5,13 @@ html, body {
     height: 100%;
 }
 
+.top-center-button {
+    z-index: 10 !important;
+}
+
+
 body {
-    display: flex;
+    display: relative;
     justify-content: center;
     align-items: center;
     background-color: #000;
@@ -24,14 +29,106 @@ body.fade-out {
 }
 
 /* Image container styling */
-.image-cont {
+
+.moraba {
+    position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    background-size: cover;
 }
 
-.image-cont img {
+/* Individual background images for each moraba */
+.moraba1 {
+    background-image: url('design.png'); /* Replace with your PNG path */
+    height: 1000px;
+    z-index: 1;
+
+}
+
+.Spielmaterial {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position it absolutely within the parent */
+    top: 25%; /* Adjust the top position as needed */
+    left: 15%; /* Adjust the left position as needed */
+    scale: 6;
+}
+
+.maat {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position it absolutely within the parent */
+    top: -45.7%; /* Adjust the top position as needed */
+    left: 68.5%; /* Adjust the left position as needed */
+    scale: .18;
+}
+
+.video-contner {
+    position: absolute;
+    top: 344%;
+    left: 77%;
+    transform: translate(-50%, -50%); /* Centers the container */
+    width: 40%; /* Adjust size as needed */
+    padding-bottom: 22.5%; 
+    height: auto;
+    z-index: 10; /* Ensures the container is on top */
+}
+
+.youtube-video {
+    display: block;
+    width: 100%; /* Full width for full clickable area */
+    height: auto;
+}
+
+.youtube-video-img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
+}
+
+
+.moraba2 {
+    background-image: url('design1.png'); /* Replace with your PNG path */
+    height: 1500px;
+    z-index: 2;
+    margin-top: -430px;
+}
+
+.moraba3 {
+    background-image: url('design3.png'); /* Replace with your PNG path */
+    z-index: 3;
+    margin-top: -430px;
+    height: 1500px;
+}
+
+.bashkatib {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position it absolutely within the parent */
+    top: 15%; /* Adjust the top position as needed */
+    left: 19%; /* Adjust the left position as needed */
+    scale: 3;
+}
+
+
+/* Tablet Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .moraba {
+        height: 500px; /* Adjust height for tablet */
+        margin-top: -50px; /* Adjust overlap for tablet */
+    }
+    .moraba2, .moraba3, .moraba4, .moraba5 {
+        margin-top: -200px; /* Adjust overlap for tablet */
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .moraba {
+        height: 300px; /* Adjust height for mobile */
+        margin-top: -30px; /* Adjust overlap for mobile */
+    }
+    .moraba2, .moraba3, .moraba4, .moraba5 {
+        margin-top: -150px; /* Adjust overlap for mobile */
+    }
 }
