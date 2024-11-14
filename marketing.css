@@ -64,7 +64,7 @@ body.fade-out {
 
 .video-contner {
     position: absolute;
-    top: 344%;
+    top: 188%;
     left: 77%;
     transform: translate(-50%, -50%); /* Centers the container */
     width: 40%; /* Adjust size as needed */
